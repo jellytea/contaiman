@@ -4,19 +4,10 @@
 
 package main
 
-import "io"
-
-type MultiOutput struct {
-	Outputs []io.Writer
+type TransparentWriter struct {
+	OnWrite func(b []byte) (int, error)
 }
 
-func (m *MultiOutput) Write(b []byte) (n int, err error) {
-	for _, o := range m.Outputs {
-		n, err = o.Write(b)
-		if err != nil {
-			panic(err)
-		}
-	}
-
-	return n, nil
+func (w *TransparentWriter) Write(b []byte) (int, error) {
+	return w.OnWrite(b)
 }

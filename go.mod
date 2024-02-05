@@ -5,7 +5,10 @@ go 1.21
 require (
 	fyne.io/fyne/v2 v2.4.3
 	github.com/containers/podman/v2 v2.2.1
+	github.com/jellytea/formui v0.0.0-20240202115125-acb5891aca8f
 )
+
+replace github.com/jellytea/formui => ../formui
 
 require (
 	fyne.io/systray v1.10.1-0.20231115130155-104f5ef7839e // indirect
@@ -62,8 +65,6 @@ require (
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/gofuzz v1.1.0 // indirect
-	github.com/google/shlex v0.0.0-20181106134648-c34317bd91bf // indirect
-	github.com/google/uuid v1.1.2 // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/gorilla/schema v1.2.0 // indirect
@@ -122,7 +123,6 @@ require (
 	github.com/tchap/go-patricia v2.3.0+incompatible // indirect
 	github.com/tevino/abool v1.2.0 // indirect
 	github.com/ulikunitz/xz v0.5.8 // indirect
-	github.com/varlink/go v0.0.0-20190502142041-0f1d566d194b // indirect
 	github.com/vbatts/tar-split v0.11.1 // indirect
 	github.com/vbauerster/mpb/v5 v5.3.0 // indirect
 	github.com/vishvananda/netlink v1.1.0 // indirect

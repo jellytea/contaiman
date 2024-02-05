@@ -6,12 +6,14 @@ package main
 
 import (
 	"context"
-	"github.com/containers/podman/v2/pkg/api/handlers"
+	"github.com/containers/podman/v2/libpod"
 	"github.com/containers/podman/v2/pkg/bindings"
 	"github.com/containers/podman/v2/pkg/bindings/containers"
 	"github.com/containers/podman/v2/pkg/bindings/images"
 	"github.com/containers/podman/v2/pkg/bindings/pods"
 	"github.com/containers/podman/v2/pkg/domain/entities"
+	createconfig "github.com/containers/podman/v2/pkg/spec"
+	"github.com/containers/podman/v2/pkg/specgen"
 )
 
 type Client struct {
@@ -48,6 +50,10 @@ func (c *Client) QueryPods() ([]*entities.ListPodsReport, error) {
 	return pods.List(c.Ctx, nil)
 }
 
-func (c *Client) CreateContainer(name string) {
-	containers.ExecCreate(c.Ctx, name, &handlers.ExecCreateConfig{})
+func (c *Client) CreatePod(name string, config *specgen.PodSpecGenerator) (*entities.PodCreateReport, error) {
+	return pods.CreatePodFromSpec(c.Ctx, config)
+}
+
+func (c *Client) CreateContainer(name string, config *createconfig.CreateConfig) (*libpod.Container, error) {
+	return createconfig.CreateContainerFromCreateConfig(c.Ctx, nil, config, nil)
 }
