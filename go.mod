@@ -5,7 +5,9 @@ go 1.21
 require (
 	fyne.io/fyne/v2 v2.4.3
 	github.com/containers/podman/v2 v2.2.1
+	github.com/docker/go-connections v0.4.0
 	github.com/jellytea/formui v0.0.0-20240202115125-acb5891aca8f
+	github.com/opencontainers/runtime-spec v1.0.3-0.20200817204227-f9c09b4ea1df
 )
 
 replace github.com/jellytea/formui => ../formui
@@ -43,7 +45,6 @@ require (
 	github.com/docker/distribution v2.7.1+incompatible // indirect
 	github.com/docker/docker v17.12.0-ce-rc1.0.20201020191947-73dc6a680cdd+incompatible // indirect
 	github.com/docker/docker-credential-helpers v0.6.3 // indirect
-	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-metrics v0.0.1 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
 	github.com/docker/libnetwork v0.8.0-dev.2.0.20190625141545-5a177b73e316 // indirect
@@ -97,7 +98,6 @@ require (
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.0.2-0.20190823105129-775207bd45b6 // indirect
 	github.com/opencontainers/runc v1.0.0-rc91.0.20200708210054-ce54a9d4d79b // indirect
-	github.com/opencontainers/runtime-spec v1.0.3-0.20200817204227-f9c09b4ea1df // indirect
 	github.com/opencontainers/runtime-tools v0.9.0 // indirect
 	github.com/opencontainers/selinux v1.6.0 // indirect
 	github.com/openshift/imagebuilder v1.1.8 // indirect
@@ -156,12 +156,12 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	honnef.co/go/js/dom v0.0.0-20210725211120-f030747120f2 // indirect
-	k8s.io/api v0.0.0-20190620084959-7cf5895f2711 // indirect
+	k8s.io/api v0.17.16 // indirect
 	k8s.io/apimachinery v0.19.4 // indirect
-	k8s.io/client-go v0.0.0-20190620085101-78d2af792bab // indirect
+	k8s.io/client-go v0.17.16 // indirect
 	k8s.io/klog v1.0.0 // indirect
 	k8s.io/klog/v2 v2.2.0 // indirect
-	k8s.io/utils v0.0.0-20190221042446-c2654d5206da // indirect
+	k8s.io/utils v0.0.0-20191114184206-e782cd3c129f // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.0.1 // indirect
 	sigs.k8s.io/yaml v1.2.0 // indirect
 )
