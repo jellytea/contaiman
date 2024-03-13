@@ -5,7 +5,9 @@ go 1.21
 require (
 	fyne.io/fyne/v2 v2.4.3
 	github.com/containers/podman/v2 v2.2.1
+	github.com/docker/go-connections v0.4.0
 	github.com/jellytea/formui v0.0.0-20240202115125-acb5891aca8f
+	github.com/opencontainers/runtime-spec v1.0.3-0.20200817204227-f9c09b4ea1df
 )
 
 replace github.com/jellytea/formui => ../formui
@@ -43,7 +45,6 @@ require (
 	github.com/docker/distribution v2.7.1+incompatible // indirect
 	github.com/docker/docker v17.12.0-ce-rc1.0.20201020191947-73dc6a680cdd+incompatible // indirect
 	github.com/docker/docker-credential-helpers v0.6.3 // indirect
-	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-metrics v0.0.1 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
 	github.com/docker/libnetwork v0.8.0-dev.2.0.20190625141545-5a177b73e316 // indirect
@@ -97,7 +98,6 @@ require (
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.0.2-0.20190823105129-775207bd45b6 // indirect
 	github.com/opencontainers/runc v1.0.0-rc91.0.20200708210054-ce54a9d4d79b // indirect
-	github.com/opencontainers/runtime-spec v1.0.3-0.20200817204227-f9c09b4ea1df // indirect
 	github.com/opencontainers/runtime-tools v0.9.0 // indirect
 	github.com/opencontainers/selinux v1.6.0 // indirect
 	github.com/openshift/imagebuilder v1.1.8 // indirect
@@ -148,7 +148,7 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
 	google.golang.org/grpc v1.38.0 // indirect
-	google.golang.org/protobuf v1.26.0 // indirect
+	google.golang.org/protobuf v1.33.0 // indirect
 	gopkg.in/fsnotify.v1 v1.4.7 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/square/go-jose.v2 v2.5.1 // indirect
